@@ -1,0 +1,54 @@
+
+.board {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+  position: relative;
+}
+.board::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: forestgreen;
+  top: calc(50% - 395px + (70px * 9 + 20px * 8) / 3 - 5px);
+  box-shadow: 0 calc((70px * 9 + 20px * 8) / 3 + 10px) 0 0 forestgreen;
+  /* 50% - (70px * 9 + 20px * 8) / 2 + (70px * 9 + 20px * 8) / 3*/
+  /* 50 % - 395px + 790px / 3 */
+}
+.board::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: forestgreen;
+  left: calc(50% - 395px + (70px * 9 + 20px * 8) / 3 - 5px);
+  box-shadow: calc((70px * 9 + 20px * 8) / 3 + 10px) 0 0 0 forestgreen;
+}
+.card {
+  box-shadow: 0 0 2px 0 #0004, 0 0 10px 0 #0002;
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+.card:hover{
+  box-shadow: 0 0 2px crimson, 0 0 12px 0 crimson;
+}
+.card-index{
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+  font-size: 12px;
+  color: forestgreen;
+}

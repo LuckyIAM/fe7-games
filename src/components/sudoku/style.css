@@ -1,0 +1,30 @@
+.card.inactive{
+    user-select: none;
+    cursor: default;
+    opacity: .5;
+}
+.card{
+    position: relative;
+
+}
+.modal{
+    position: absolute;
+    grid-template-columns: repeat(5, 30px);
+    grid-template-rows: repeat(2, 30px);
+    gap: 10px;
+    padding: 10px;
+    background-color: #dedede;
+    border-radius: 10px;
+    
+    /* bottom: 50%; */
+}
+.num{
+    display: flex;
+    border: 1px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
